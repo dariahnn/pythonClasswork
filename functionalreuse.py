@@ -16,10 +16,10 @@ def calculate_taxes(price):
     result = price * (vattax / 100)
     return result
 #THIS FUNCTION WILL THEN GET OUR FINAL PRICE
-def get_final_price(price,discount,vattax):
+def get_final_price(price,discount):
     discountedPrice =apply_discount(price,discount)
     tax = calculate_taxes(discountedPrice)
     result_price= discountedPrice + tax
-    return (f"The item discount price {discountedPrice} it has a tax" f"of {tax} so the final price is {result_price}")
-
- print(get_final_price(price,discount))
+    return (f"The item discount price {discountedPrice} "
+            f"it has a tax" f"of {tax} so the final price is {result_price}")
+print(get_final_price(price,discount))
